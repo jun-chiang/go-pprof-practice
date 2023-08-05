@@ -2,7 +2,6 @@ package mouse
 
 import (
 	"log"
-	"time"
 
 	"github.com/wolfogre/go-pprof-practice/constant"
 )
@@ -39,14 +38,14 @@ func (m *Mouse) Shit() {
 
 func (m *Mouse) Pee() {
 	log.Println(m.Name(), "pee")
-	go func() {
-		time.Sleep(time.Second * 30)
-		max := constant.Gi
-		for len(m.slowBuffer)*constant.Mi < max {
-			m.slowBuffer = append(m.slowBuffer, [constant.Mi]byte{})
-			time.Sleep(time.Millisecond * 500)
-		}
-	}()
+	// go func() {
+	// 	time.Sleep(time.Second * 30)
+	// 	max := constant.Gi
+	// 	for len(m.slowBuffer)*constant.Mi < max {
+	// 		m.slowBuffer = append(m.slowBuffer, [constant.Mi]byte{})
+	// 		time.Sleep(time.Millisecond * 500)
+	// 	}
+	// }()
 }
 
 func (m *Mouse) Hole() {
@@ -55,8 +54,8 @@ func (m *Mouse) Hole() {
 
 func (m *Mouse) Steal() {
 	log.Println(m.Name(), "steal")
-	max := constant.Gi
-	for len(m.buffer)*constant.Mi < max {
-		m.buffer = append(m.buffer, [constant.Mi]byte{})
-	}
+	// max := constant.Gi
+	// for len(m.buffer)*constant.Mi < max {
+	// 	m.buffer = append(m.buffer, [constant.Mi]byte{})
+	// }
 }
